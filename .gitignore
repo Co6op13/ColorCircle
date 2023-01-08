@@ -1,24 +1,24 @@
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
-/SpaceShooter/Assets/Ignored/
-/SpaceShooter/Library
-/SpaceShooter/[Ll]ibrary/
-/SpaceShooter/[Tt]emp/
-/SpaceShooter/[Oo]bj/
-/SpaceShooter/[Bb]uild/
-/SpaceShooter/[Bb]uilds/
-/SpaceShooter/[Ll]ogs/
-/SpaceShooter/[Uu]ser[Ss]ettings/
-/TD/Assets/Ignored/
-/TD/Library
-/TD/[Ll]ibrary/
-/TD/[Tt]emp/
-/TD/[Oo]bj/
-/TD/[Bb]uild/
-/TD/[Bb]uilds/
-/TD/[Ll]ogs/
-/TD/[Uu]ser[Ss]ettings/
+/ColorCircle/Assets/Ignored/
+/ColorCircle/Library
+/ColorCircle/[Ll]ibrary/
+/ColorCircle/[Tt]emp/
+/ColorCircle/[Oo]bj/
+/ColorCircle/[Bb]uild/
+/ColorCircle/[Bb]uilds/
+/ColorCircle/[Ll]ogs/
+/ColorCircle/[Uu]ser[Ss]ettings/
+/ColorCircle/Assets/Ignored/
+/ColorCircle/Library
+/ColorCircle/[Ll]ibrary/
+/ColorCircle/[Tt]emp/
+/ColorCircle/[Oo]bj/
+/ColorCircle/[Bb]uild/
+/ColorCircle/[Bb]uilds/
+/ColorCircle/[Ll]ogs/
+/ColorCircle/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
