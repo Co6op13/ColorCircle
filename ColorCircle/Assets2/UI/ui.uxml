@@ -1,0 +1,48 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UiElemnt.uss?fileID=7433441132597879392&amp;guid=869221e67d2411f4f86e6fd6f18aef3a&amp;type=3#UiElemnt" />
+    <ui:VisualElement name="VisualElement" style="color: rgb(34, 34, 34); position: absolute; height: 20%; width: 100%;">
+        <ui:VisualElement style="flex-direction: row-reverse; -unity-text-outline-color: rgb(42, 42, 42);">
+            <ui:Label text="0" display-tooltip-when-elided="true" name="PointsLabel" style="left: auto; right: auto; font-size: 48px; -unity-text-outline-color: rgb(233, 233, 233); text-shadow: 0 0 0 rgb(255, 255, 255); color: rgb(219, 219, 219);" />
+            <ui:Label text="Points" display-tooltip-when-elided="true" style="left: auto; right: 15%; font-size: 48px; -unity-text-outline-color: rgb(233, 233, 233); text-shadow: 0 0 0 rgb(255, 255, 255); color: rgb(219, 219, 219);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="MainMenu" style="flex-grow: 1; justify-content: center; align-items: center; background-color: rgba(53, 53, 53, 0.56); display: flex; visibility: visible;">
+        <ui:VisualElement name="PauseMenu" style="height: 50%; width: 50%; justify-content: center; flex-direction: column; align-items: center; rotate: -5deg; -unity-background-image-tint-color: rgb(152, 152, 152); top: auto; position: absolute; display: flex; visibility: hidden; overflow: visible;">
+            <ui:Label text="Pause" display-tooltip-when-elided="true" name="Pause" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+            <ui:Label text="&#10;&#10;" display-tooltip-when-elided="true" />
+            <ui:Button text="Resume" display-tooltip-when-elided="true" name="ResumeButton" class="MenuButton" style="width: 50%; height: 20%; font-size: 48px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; overflow: visible;" />
+            <ui:Button text="Restart" display-tooltip-when-elided="true" name="RestartButton" class="MenuButton" style="width: 50%; height: 20%; font-size: 48px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; top: 50px; overflow: visible;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="StartMenu" style="width: 50%; height: 50%; align-items: center; rotate: -5deg; display: flex; position: absolute; visibility: hidden;">
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:Label text="C" display-tooltip-when-elided="true" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+                <ui:Label text="o" display-tooltip-when-elided="true" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+                <ui:Label text="L" display-tooltip-when-elided="true" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+                <ui:Label text="o" display-tooltip-when-elided="true" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+                <ui:Label text="r" display-tooltip-when-elided="true" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+            </ui:VisualElement>
+            <ui:Button text="Start Game" display-tooltip-when-elided="true" name="StartGameButton" class="MenuButton" style="overflow: visible;" />
+            <ui:Button text="Exit Game" display-tooltip-when-elided="true" name="ExitGameButton" class="MenuButton" style="top: 50px; overflow: visible;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="GameOverMenu" style="height: 50%; width: 50%; justify-content: center; flex-direction: column; align-items: center; rotate: -5deg; -unity-background-image-tint-color: rgb(152, 152, 152); top: auto; position: absolute; display: flex; visibility: hidden;">
+            <ui:VisualElement name="VisualElement" style="flex-direction: row;">
+                <ui:Label text="Ga" display-tooltip-when-elided="true" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+                <ui:Label text="me" display-tooltip-when-elided="true" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+                <ui:Label text=" " display-tooltip-when-elided="true" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+                <ui:Label display-tooltip-when-elided="true" text=" " style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+                <ui:Label text="Ov" display-tooltip-when-elided="true" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+                <ui:Label text="e" display-tooltip-when-elided="true" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+                <ui:Label text="r" display-tooltip-when-elided="true" style="font-size: 128px; -unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(224, 224, 224);" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:Label text="You have   " display-tooltip-when-elided="true" style="font-size: 54px; -unity-font-style: bold; color: rgb(224, 224, 224);" />
+                <ui:Label text="   " display-tooltip-when-elided="true" style="font-size: 54px; -unity-font-style: bold;" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="GameOverPoints" style="font-size: 54px; color: rgb(224, 224, 224);" />
+                <ui:Label text="   " display-tooltip-when-elided="true" style="font-size: 54px; -unity-font-style: bold;" />
+                <ui:Label text=" Points" display-tooltip-when-elided="true" style="font-size: 54px; -unity-font-style: bold; color: rgb(224, 224, 224);" />
+            </ui:VisualElement>
+            <ui:Button text="Restart Game" display-tooltip-when-elided="true" name="RestartGameButton" class="MenuButton" style="overflow: visible;" />
+            <ui:Button text="Exit Game" display-tooltip-when-elided="true" name="ExitGameButton2" class="MenuButton" style="top: 50px; overflow: visible;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
