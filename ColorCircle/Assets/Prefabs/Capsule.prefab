@@ -91,7 +91,7 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -30, y: 30, z: 0}
+  - {x: -30, y: 60, z: 0}
   - {x: -30, y: 24, z: 1}
   - {x: -30, y: 18, z: 1}
   - {x: -30, y: 12, z: 1}
@@ -101,7 +101,7 @@ LineRenderer:
   - {x: -30, y: -12, z: 1}
   - {x: -30, y: -18, z: 1}
   - {x: -30, y: -24, z: 1}
-  - {x: -30, y: -30, z: 1}
+  - {x: -30, y: -60, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 2
@@ -181,7 +181,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 62}
+  m_Size: {x: 4, y: 120}
   m_EdgeRadius: 0
 --- !u!1 &3865059565751605253
 GameObject:
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 3865059565751605252}
   - component: {fileID: 3865059565751605307}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 8081859557722042152}
   - component: {fileID: 2080916435413292635}
   - component: {fileID: 4056516980094741501}
-  - component: {fileID: 8911147695312687876}
+  - component: {fileID: 7975857131846790582}
   m_Layer: 0
   m_Name: Line (1)
   m_TagString: Untagged
@@ -332,17 +332,17 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 30, y: 30, z: 0}
-  - {x: 24, y: 30, z: 1}
-  - {x: 18, y: 30, z: 1}
-  - {x: 12, y: 30, z: 1}
-  - {x: 6, y: 30, z: 1}
-  - {x: 0, y: 30, z: 1}
-  - {x: -6, y: 30, z: 1}
-  - {x: -12, y: 30, z: 1}
-  - {x: -18, y: 30, z: 1}
-  - {x: -24, y: 30, z: 1}
-  - {x: -30, y: 30, z: 1}
+  - {x: 30, y: 60, z: 0}
+  - {x: 24, y: 63, z: 1}
+  - {x: 18, y: 66, z: 1}
+  - {x: 12, y: 69, z: 1}
+  - {x: 6, y: 72, z: 1}
+  - {x: 0, y: 75, z: 1}
+  - {x: -6, y: 72, z: 1}
+  - {x: -12, y: 69, z: 1}
+  - {x: -18, y: 66, z: 1}
+  - {x: -24, y: 63, z: 1}
+  - {x: -30, y: 60, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 2
@@ -398,8 +398,8 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
---- !u!61 &8911147695312687876
-BoxCollider2D:
+--- !u!60 &7975857131846790582
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -411,7 +411,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 31}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -421,9 +421,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 62, y: 4}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 33.366486, y: 60.85306}
+      - {x: -0.7232475, y: 78.24904}
+      - {x: -33.099, y: 60.685898}
+      - {x: -28.587904, y: 58.33194}
+      - {x: -0.3420353, y: 73.52017}
+      - {x: 28.759499, y: 58.998318}
 --- !u!1 &5435686731331442256
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +520,7 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 30, y: -30, z: 0}
+  - {x: 30, y: -60, z: 0}
   - {x: 30, y: -24, z: 1}
   - {x: 30, y: -18, z: 1}
   - {x: 30, y: -12, z: 1}
@@ -525,7 +530,7 @@ LineRenderer:
   - {x: 30, y: 12, z: 1}
   - {x: 30, y: 18, z: 1}
   - {x: 30, y: 24, z: 1}
-  - {x: 30, y: 30, z: 1}
+  - {x: 30, y: 60, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 2
@@ -605,7 +610,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 62}
+  m_Size: {x: 4, y: 120}
   m_EdgeRadius: 0
 --- !u!1 &5695893214889184770
 GameObject:
@@ -618,7 +623,7 @@ GameObject:
   - component: {fileID: 838856228272353606}
   - component: {fileID: 2256961420815318146}
   - component: {fileID: 7296187949692555175}
-  - component: {fileID: 8305251761578246372}
+  - component: {fileID: 8779908746413537254}
   m_Layer: 0
   m_Name: Line (3)
   m_TagString: Untagged
@@ -698,17 +703,17 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -30, y: -30, z: 0}
-  - {x: -24, y: -30, z: 1}
-  - {x: -18, y: -30, z: 1}
-  - {x: -12, y: -30, z: 1}
-  - {x: -6, y: -30, z: 1}
-  - {x: 0, y: -30, z: 1}
-  - {x: 6, y: -30, z: 1}
-  - {x: 12, y: -30, z: 1}
-  - {x: 18, y: -30, z: 1}
-  - {x: 24, y: -30, z: 1}
-  - {x: 30, y: -30, z: 1}
+  - {x: -30, y: -60, z: 0}
+  - {x: -24, y: -63, z: 1}
+  - {x: -18, y: -66, z: 1}
+  - {x: -12, y: -69, z: 1}
+  - {x: -6, y: -72, z: 1}
+  - {x: 0, y: -75, z: 1}
+  - {x: 6, y: -72, z: 1}
+  - {x: 12, y: -69, z: 1}
+  - {x: 18, y: -66, z: 1}
+  - {x: 24, y: -63, z: 1}
+  - {x: 30, y: -60, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 2
@@ -764,8 +769,8 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
---- !u!61 &8305251761578246372
-BoxCollider2D:
+--- !u!60 &8779908746413537254
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -777,7 +782,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -31}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -787,6 +792,11 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 62, y: 4}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.31015778, y: -72.47826}
+      - {x: -30.723377, y: -58.850945}
+      - {x: -34.039364, y: -63.734898}
+      - {x: 0.5190754, y: -81.17338}
+      - {x: 34.349533, y: -63.424736}
+      - {x: 28.552284, y: -56.989998}

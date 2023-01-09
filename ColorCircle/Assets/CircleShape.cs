@@ -1,41 +1,55 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CircleShape : MonoBehaviour, IShape
 {
     [SerializeField] private GameObject fragment;
     [SerializeField] private Palette palette;
-    [SerializeField] private float lengthLine;
+    [SerializeField] private float size;
     [SerializeField] private float speedReduction, speedRotate;
     private float startPosition = 0;
     private float angle;
-    
+    private GameObject[] fragments;
+
+    public void DisableShape()
+    {
+        Debug.Log(222);
+        for (int i = 0; i < fragments.Length; i++)
+        {
+            fragments[i].GetComponent<LineController>().DisableFragment();
+        }
+        Debug.Log(222222);
+        //gameObject.SetActive(false);
+    }
+
 
 
     //private void Start()
     //{
     //    int[] aa = new int[] { 1, 2, 3, 5 };
 
-    //    SetVariable(aa, speedReduction, speedRotate);
+    //    SetVariable(aa, size, speedReduction, speedRotate);
     //}
 
-    public void SetVariable(int[] colorIndexs, float speedReduction, float speedRotate)
+    public void SetVariable(int[] colorIndexs, float size, float speedReduction, float speedRotate)
     {
+        fragments = new GameObject[colorIndexs.Length];
         for (int i = 0; i < colorIndexs.Length; i++)
         {
-            GameObject frag = ShapePool.Instance.GetFromPool(fragment.name, Vector3.zero, transform.rotation);
+            fragments[i] = ShapePool.Instance.GetFromPool(fragment.name, Vector3.zero, transform.rotation);
+            fragments[i].gameObject.transform.SetParent(gameObject.transform);
             //var frag = Instantiate(fragmentCircle, Vector3.zero, transform.rotation);            
-            var lc =  frag.GetComponent<LineController>();   
-            frag.layer = colorIndexs[i] + 10;
-            lc.SetVariables(palette.colors[colorIndexs[i]], colorIndexs.Length, startPosition);
+            var lc = fragments[i].GetComponent<LineController>();
+            fragments[i].layer = colorIndexs[i] + 10;
+            lc.SetVariables(palette.colors[colorIndexs[i]], size, colorIndexs.Length, startPosition);
             startPosition = lc.endPosition;
             //Debug.Log(startPosition);
-            frag.SetActive(true);
+            fragments[i].SetActive(true);
+            fragments[i].GetComponent<LineCollision>().SetColliderPosition();
         }
         this.speedReduction = speedReduction;
         this.speedRotate = speedRotate;
         angle = Random.Range(0, 360);
+
     }
 
     private void FixedUpdate()
@@ -46,7 +60,23 @@ public class CircleShape : MonoBehaviour, IShape
         transform.localScale = new Vector3(scale, scale, 1f);
         if (scale < 0)
         {
+            gameObject.transform.DetachChildren();
             gameObject.SetActive(false);
         }
+        
     }
+
+    //private void OnDisable()
+    //{
+
+    //    if (fragments != null)
+    //    {
+    //        for (int i = 0; i < fragments.Length; i++)
+    //        {
+    //            fragments[i].SetActive(false);
+                
+    //        }
+    //    }
+    //    fragments = null;
+    //}
 }

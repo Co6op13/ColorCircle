@@ -180,11 +180,17 @@ MonoBehaviour:
   parentObject: {fileID: 60168107}
   pools:
   - prefab: {fileID: 3240069925226019384, guid: 08fb0a74f2080de40bdffc5be780495c, type: 3}
-    size: 10
-  - prefab: {fileID: 3865059565751605253, guid: 0ba459f2bfe77cc4ea530c4f63198149, type: 3}
-    size: 5
+    size: 8
+  - prefab: {fileID: 3865059565751605253, guid: 3c36921377b14e34f86acb34ca3782d3, type: 3}
+    size: 2
   - prefab: {fileID: 838325274618531707, guid: ba076c75537ca09429830b3fb6b33781, type: 3}
-    size: 5
+    size: 2
+  - prefab: {fileID: 3865059565751605253, guid: 2030975cc90f4504b98d4fb71e4a2e00, type: 3}
+    size: 2
+  - prefab: {fileID: 3865059565751605253, guid: 4e28ce668c4725e49b4ccaafc7871e1d, type: 3}
+    size: 1
+  - prefab: {fileID: 8183067503230451709, guid: 45ca95b43a8f2bd4d9a95837b710cc22, type: 3}
+    size: 30
 --- !u!1001 &152727225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10440,7 +10446,7 @@ Transform:
   m_Children:
   - {fileID: 224822278}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &497121616
 Rigidbody2D:
@@ -15602,7 +15608,7 @@ Transform:
   - {fileID: 60168107}
   - {fileID: 1294998688}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &997550272
 GameObject:
@@ -20451,7 +20457,7 @@ Transform:
   - {fileID: 2039020078}
   - {fileID: 1913658731}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1035335223
 GameObject:
@@ -25281,7 +25287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1162002301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25365,13 +25371,13 @@ MonoBehaviour:
   waves:
   - shapes:
     - delay: 0
-      type: 2
+      type: 0
       colorIndexs: 
     - delay: 2
-      type: 2
+      type: 0
       colorIndexs: 
     - delay: 2
-      type: 2
+      type: 0
       colorIndexs: 
     - delay: 2
       type: 2
@@ -25385,9 +25391,11 @@ MonoBehaviour:
     IsActive: 0
     IsEnd: 0
   circlePrefab: {fileID: 838325274618531707, guid: ba076c75537ca09429830b3fb6b33781, type: 3}
-  squarePrefab: {fileID: 3865059565751605253, guid: 0ba459f2bfe77cc4ea530c4f63198149, type: 3}
+  squarePrefab: {fileID: 3865059565751605253, guid: 3c36921377b14e34f86acb34ca3782d3, type: 3}
+  trianglePrefab: {fileID: 3865059565751605253, guid: 2030975cc90f4504b98d4fb71e4a2e00, type: 3}
   palette: {fileID: 5128959683945799932, guid: 05aa12743288f624ca248f7fe24f3def, type: 3}
   isAddNextShape: 0
+  size: 40
 --- !u!1 &1456938437
 GameObject:
   m_ObjectHideFlags: 0
@@ -26353,7 +26361,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -32141,16 +32149,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 838325274618531704, guid: ba076c75537ca09429830b3fb6b33781, type: 3}
+      propertyPath: size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 838325274618531704, guid: ba076c75537ca09429830b3fb6b33781, type: 3}
       propertyPath: speedRotate
       value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 838325274618531704, guid: ba076c75537ca09429830b3fb6b33781, type: 3}
       propertyPath: speedReduction
-      value: 1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 838325274618531705, guid: ba076c75537ca09429830b3fb6b33781, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 838325274618531705, guid: ba076c75537ca09429830b3fb6b33781, type: 3}
       propertyPath: m_LocalPosition.x

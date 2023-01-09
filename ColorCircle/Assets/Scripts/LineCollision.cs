@@ -17,8 +17,8 @@ public class LineCollision : MonoBehaviour
         polygonCollider = GetComponent<PolygonCollider2D>();
     }
 
-    private void LateUpdate()
-    {
+    public void SetColliderPosition()
+    {        
 
         //Get all the positions from the line renderer
         Vector3[] positions = lineController.GetPositions();
@@ -26,8 +26,6 @@ public class LineCollision : MonoBehaviour
         //If we have enough points to draw a line
         if (positions.Count() >= 2)
         {
-
-
                 //Get the number of line between two points
                 int numberOfLines = positions.Length - 1;
 

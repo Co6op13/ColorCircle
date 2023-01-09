@@ -65,7 +65,7 @@ public class DrawCircle : MonoBehaviour
     {
         for (int i = 0; i < fragments; i++)
         {
-            lcS[i].DestroyFragment();
+           // lcS[i].DestroyFragment();
             //lcS[i].isPassed = true;
         }
         speedRotate += accelerateRotateSpeed;

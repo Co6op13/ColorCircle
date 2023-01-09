@@ -41,7 +41,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355474388099312415}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d4c0f03e3374e6408285c788a2d5586, type: 3}
   m_Name: 
@@ -92,15 +92,6 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: -30, y: 30, z: 0}
-  - {x: -30, y: 24, z: 1}
-  - {x: -30, y: 18, z: 1}
-  - {x: -30, y: 12, z: 1}
-  - {x: -30, y: 6, z: 1}
-  - {x: -30, y: 0, z: 1}
-  - {x: -30, y: -6, z: 1}
-  - {x: -30, y: -12, z: 1}
-  - {x: -30, y: -18, z: 1}
-  - {x: -30, y: -24, z: 1}
   - {x: -30, y: -30, z: 1}
   m_Parameters:
     serializedVersion: 3
@@ -155,7 +146,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 0
+  m_UseWorldSpace: 1
   m_Loop: 0
 --- !u!61 &3937864353499949430
 BoxCollider2D:
@@ -194,7 +185,7 @@ GameObject:
   - component: {fileID: 3865059565751605252}
   - component: {fileID: 3865059565751605307}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Square 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,15 +223,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 2255592963451336749}
-  - {fileID: 4056516980094741501}
-  - {fileID: 757901446061419570}
-  - {fileID: 7296187949692555175}
+  - {fileID: 8871557202632344510}
+  - {fileID: 2080916435413292635}
+  - {fileID: 4554569180821942307}
+  - {fileID: 2256961420815318146}
   palette: {fileID: 5128959683945799932, guid: 05aa12743288f624ca248f7fe24f3def, type: 3}
-  size: 0
+  lengthLine: 30
   speedReduction: 0
   speedRotate: 0
-  particle: {fileID: 8183067503230451709, guid: 45ca95b43a8f2bd4d9a95837b710cc22, type: 3}
 --- !u!1 &5065566618673451001
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +272,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5065566618673451001}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d4c0f03e3374e6408285c788a2d5586, type: 3}
   m_Name: 
@@ -333,15 +323,6 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 30, y: 30, z: 0}
-  - {x: 24, y: 30, z: 1}
-  - {x: 18, y: 30, z: 1}
-  - {x: 12, y: 30, z: 1}
-  - {x: 6, y: 30, z: 1}
-  - {x: 0, y: 30, z: 1}
-  - {x: -6, y: 30, z: 1}
-  - {x: -12, y: 30, z: 1}
-  - {x: -18, y: 30, z: 1}
-  - {x: -24, y: 30, z: 1}
   - {x: -30, y: 30, z: 1}
   m_Parameters:
     serializedVersion: 3
@@ -396,7 +377,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 0
+  m_UseWorldSpace: 1
   m_Loop: 0
 --- !u!61 &8911147695312687876
 BoxCollider2D:
@@ -465,7 +446,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5435686731331442256}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d4c0f03e3374e6408285c788a2d5586, type: 3}
   m_Name: 
@@ -516,15 +497,6 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 30, y: -30, z: 0}
-  - {x: 30, y: -24, z: 1}
-  - {x: 30, y: -18, z: 1}
-  - {x: 30, y: -12, z: 1}
-  - {x: 30, y: -6, z: 1}
-  - {x: 30, y: 0, z: 1}
-  - {x: 30, y: 6, z: 1}
-  - {x: 30, y: 12, z: 1}
-  - {x: 30, y: 18, z: 1}
-  - {x: 30, y: 24, z: 1}
   - {x: 30, y: 30, z: 1}
   m_Parameters:
     serializedVersion: 3
@@ -579,7 +551,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 0
+  m_UseWorldSpace: 1
   m_Loop: 0
 --- !u!61 &1872519564987958654
 BoxCollider2D:
@@ -648,7 +620,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5695893214889184770}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d4c0f03e3374e6408285c788a2d5586, type: 3}
   m_Name: 
@@ -699,15 +671,6 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: -30, y: -30, z: 0}
-  - {x: -24, y: -30, z: 1}
-  - {x: -18, y: -30, z: 1}
-  - {x: -12, y: -30, z: 1}
-  - {x: -6, y: -30, z: 1}
-  - {x: 0, y: -30, z: 1}
-  - {x: 6, y: -30, z: 1}
-  - {x: 12, y: -30, z: 1}
-  - {x: 18, y: -30, z: 1}
-  - {x: 24, y: -30, z: 1}
   - {x: 30, y: -30, z: 1}
   m_Parameters:
     serializedVersion: 3
@@ -762,7 +725,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 0
+  m_UseWorldSpace: 1
   m_Loop: 0
 --- !u!61 &8305251761578246372
 BoxCollider2D:

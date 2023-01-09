@@ -9,7 +9,7 @@ public class LineController : MonoBehaviour
     //[SerializeField] private float rotateSpeed;
     [SerializeField] private LineRenderer circleRenderer;
     [SerializeField] private int steps;
-    [SerializeField] private float radius;
+    [SerializeField] private float size;
     [SerializeField] private int fragments;
     [SerializeField] private int vertexCount;
     [SerializeField] private float startPosition;
@@ -25,11 +25,11 @@ public class LineController : MonoBehaviour
     private LineRenderer lr;
     public bool isPassed = false;
 
-    public void SetVariables (Color color, int fragments,  float startPosition)
+    public void SetVariables (Color color, float size, int fragments,  float startPosition)
     {
         this.color = color;
         this.fragments = fragments;
-        //this.radius = radius;
+        this.size = size;
         this.startPosition = startPosition;
         lr.startColor = color;
         lr.endColor = color;
@@ -88,7 +88,7 @@ public class LineController : MonoBehaviour
     }
 
 
-    public void DestroyFragment()
+    public void DisableFragment()
     {
         //audioUpPoint.Play();
         Vector3[] points = new Vector3[circleRenderer.positionCount];
@@ -96,16 +96,15 @@ public class LineController : MonoBehaviour
         circleRenderer.GetPositions(points);
         foreach ( var point in points)
         {
-            int rand = Random.Range(0, 2);
-            Debug.Log(rand);
+            int rand = Random.Range(0, 2);   
             if (rand == 1)
             {
-                var p =Instantiate(particle, point, transform.rotation);
+                var p =ShapePool.Instance.GetFromPool(particle.name, point, transform.rotation);
                 var pp = p.GetComponent<ParticleSystem>().main;
                 pp.startColor = color;
             }
         }
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         //Destroy(gameObject);
     }
     public void DrawCircle()
@@ -116,7 +115,7 @@ public class LineController : MonoBehaviour
 
         for (int i = 0; i < circleRenderer.positionCount; i++)
         {
-            Vector3 pos = new Vector3(radius * Mathf.Cos(theta), radius * Mathf.Sin(theta), 0f) + transform.position;
+            Vector3 pos = new Vector3(size * Mathf.Cos(theta), size * Mathf.Sin(theta), 0f) + transform.position;
             //nodes.Add(pos);
             circleRenderer.SetPosition(i, pos);
             theta += deltaTheta;

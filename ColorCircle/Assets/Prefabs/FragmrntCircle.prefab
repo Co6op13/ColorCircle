@@ -47,17 +47,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f406151f5a7084ca2535b8273480d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 0.01
   circleRenderer: {fileID: 3240069925226019367}
   steps: 5
-  radius: 30
+  size: 0
   fragments: 4
   vertexCount: 15
   startPosition: 0
   endPosition: 0
   color: {r: 0, g: 0, b: 0, a: 0}
-  speed: 0
-  acselerate: 0
   collider2d: {fileID: 0}
   particle: {fileID: 8183067503230451709, guid: 45ca95b43a8f2bd4d9a95837b710cc22, type: 3}
   isPassed: 0
@@ -172,7 +169,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
 --- !u!114 &3240069925226019364
 MonoBehaviour:

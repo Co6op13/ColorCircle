@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+
         Vector3 diference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotateZ = Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotateZ - 90);
@@ -60,6 +61,7 @@ public class Player : MonoBehaviour
     }
     private IEnumerator Dash()
     {
+        //Debug.Break();
         triger = true;
         while (triger && cursorPosition.localPosition.y < distanseDash)
         {
