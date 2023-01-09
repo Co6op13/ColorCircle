@@ -50,17 +50,16 @@ MonoBehaviour:
   rotateSpeed: 0.01
   circleRenderer: {fileID: 3240069925226019367}
   steps: 5
-  radius: 6
+  radius: 30
   fragments: 4
   vertexCount: 15
   startPosition: 0
   endPosition: 0
   color: {r: 0, g: 0, b: 0, a: 0}
   speed: 0
-  acselerate: 0.4
-  collider: {fileID: 0}
+  acselerate: 0
+  collider2d: {fileID: 0}
   particle: {fileID: 8183067503230451709, guid: 45ca95b43a8f2bd4d9a95837b710cc22, type: 3}
-  nodes: []
   isPassed: 0
 --- !u!120 &3240069925226019367
 LineRenderer:

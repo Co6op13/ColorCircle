@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DrawCircle : MonoBehaviour
 {
-
     [SerializeField] private UiMenu menu;
     [SerializeField] private Palette palette;
     [SerializeField] private int fragments;
@@ -100,7 +99,7 @@ public class DrawCircle : MonoBehaviour
                // Debug.Log(layer);
             }
             frag.layer = layer;
-            lcS[i].SetVariables(palette.colors[layer - 10], fragments, radius, startPosition, speed, speedRotate * directionRotate);
+            //lcS[i].SetVariables(palette.colors[layer - 10], fragments, radius, startPosition, speed, speedRotate * directionRotate);
             startPosition = lcS[i].endPosition;
             //Debug.Log(startPosition);
         }

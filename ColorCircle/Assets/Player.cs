@@ -72,17 +72,16 @@ public class Player : MonoBehaviour
         collider2d.offset = startPosCurcosr;
         cursorPosition.localPosition = startPosCurcosr;
         yield return new WaitUntil(() => canDash == true);
-        collider2d.enabled = true;
+        //collider2d.enabled = true;
         yield break;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collider2d.enabled = false;
+        //collider2d.enabled = false;
         triger = false;
         if (gameObject.layer.Equals(collision.gameObject.layer))
         {
-
             MyEventManager.SendIncreasePoints();
             //GameManager.Instance.DisableCurrentShape();
 
@@ -97,7 +96,7 @@ public class Player : MonoBehaviour
         else
         {
             Debug.Log(gameObject.layer +"  " + collision.gameObject.layer);
-            Debug.Break();
+
             //sprite.enabled = false;
             //circle.isGameOver = true;
             //music.StopMusic();

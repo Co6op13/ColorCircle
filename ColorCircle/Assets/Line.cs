@@ -24,8 +24,16 @@ public class Line : MonoBehaviour
         line.endColor = color;
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        //Vector3[] oldPos = new Vector3[line.positionCount];
+        //Vector3[] newPos = new Vector3[line.positionCount];
+        //line.GetPositions(oldPos);
+        //for (int i = 0; i < line.positionCount; i ++)
+        //{
+        //    newPos[i] = transform.localToWorldMatrix * new Vector4(oldPos[i].x, oldPos[i].y, 0, 1);
+        //}
+        //line.SetPositions( newPos);
         //Calculate new postion 
         Vector3 newBeginPos = transform.localToWorldMatrix * new Vector4(startPos.x, startPos.y, 0, 1);
         Vector3 newEndPos = transform.localToWorldMatrix * new Vector4(endPos.x, endPos.y, 0, 1);

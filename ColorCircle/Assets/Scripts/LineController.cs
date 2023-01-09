@@ -6,7 +6,7 @@ using UnityEngine;
 public class LineController : MonoBehaviour
 {
    // [SerializeField] private AudioSource audioUpPoint;
-    [SerializeField] private float rotateSpeed;
+    //[SerializeField] private float rotateSpeed;
     [SerializeField] private LineRenderer circleRenderer;
     [SerializeField] private int steps;
     [SerializeField] private float radius;
@@ -15,8 +15,8 @@ public class LineController : MonoBehaviour
     [SerializeField] private float startPosition;
     [SerializeField] public float endPosition;
     [SerializeField] private Color color;
-    [SerializeField] private float speed;
-    [SerializeField] private float acselerate;
+   // [SerializeField] private float speed;
+    //[SerializeField] private float acselerate;
     [SerializeField] private Collider2D collider2d;
     [SerializeField] private GameObject particle;
     
@@ -25,14 +25,12 @@ public class LineController : MonoBehaviour
     private LineRenderer lr;
     public bool isPassed = false;
 
-    public void SetVariables (Color color, int fragments, float radius, float startPosition, float speed, float rotateSpeed)
+    public void SetVariables (Color color, int fragments,  float startPosition)
     {
         this.color = color;
         this.fragments = fragments;
-        this.radius = radius;
+        //this.radius = radius;
         this.startPosition = startPosition;
-        this.speed = speed;
-        this.rotateSpeed = rotateSpeed;
         lr.startColor = color;
         lr.endColor = color;
         lr.positionCount = vertexCount + 1;
@@ -58,23 +56,23 @@ public class LineController : MonoBehaviour
         collider2d.enabled = false;
     }
 
-    private void FixedUpdate()
-    {        
-        DrawCircle();
-        radius -= speed * Time.fixedDeltaTime;
-        if (isPassed)
-        {
-            speed += acselerate * 2;
-        }
-        if (radius < 5)
-        {
-            speed += acselerate;
-        }
-        if (radius <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+    //private void FixedUpdate()
+    //{        
+    //    DrawCircle();
+    //    radius -= speed * Time.fixedDeltaTime;
+    //    if (isPassed)
+    //    {
+    //        speed += acselerate * 2;
+    //    }
+    //    if (radius < 5)
+    //    {
+    //        speed += acselerate;
+    //    }
+    //    if (radius <= 0)
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 
 
     public Vector3[] GetPositions ()
@@ -124,6 +122,6 @@ public class LineController : MonoBehaviour
             theta += deltaTheta;
         }
         endPosition =theta - deltaTheta;
-        startPosition += rotateSpeed;
+        //startPosition += rotateSpeed;
     }
 }

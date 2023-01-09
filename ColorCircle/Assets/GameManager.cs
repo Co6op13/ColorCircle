@@ -56,13 +56,13 @@ public class GameManager : MonoBehaviour
     //}
     private void SetColors()
     {
-        for  (int w = 0; w < waves.Length; w++)
+        for (int w = 0; w < waves.Length; w++)
         {
             for (int s = 0; s < waves[w].shapes.Length; s++)
             {
-              if (waves[w].shapes[s].type == ShapeVariable.Square)
+                if (waves[w].shapes[s].type == ShapeVariable.Square)
                 {
-                    waves[w].shapes[s].colorIndexs = SelectionColors(4);                   
+                    waves[w].shapes[s].colorIndexs = SelectionColors(4);
                 }
                 else if (waves[w].shapes[s].type == ShapeVariable.Circle)
                 {
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     private int[] SelectionColors(int count)
     {
         int[] colorIndexs = new int[count];
-        for(int i = 0; i < count; i++)
+        for (int i = 0; i < count; i++)
         {
             colorIndexs[i] = Random.Range(0, palette.colors.Length);
         }
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         speedReduction = startSpeedReduction;
         speedRotation = startSpeedRotation;
         StartCoroutine(ActivationWawe());
-        
+
     }
 
     //private IEnumerator WaitStartLavel()
@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator ActivationWawe()
     {
         isAddNextShape = true;
-        for (int i = 0;i < waves.Length; i++)
+        for (int i = 0; i < waves.Length; i++)
         {
             StartCoroutine(SpawnShape(waves[i], i));
             yield return new WaitUntil(() => waves[i].IsEnd == true);
@@ -125,13 +125,13 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void AddShape(ShapeVariable nameShape, int numberWave,int numberShape)
+    public void AddShape(ShapeVariable nameShape, int numberWave, int numberShape)
     {
         currentShape = ShapePool.Instance.GetFromPool(nameShape.ToString(), Vector3.zero, transform.rotation);
         int directionRotate = Random.Range(0, 2) > 0 ? 1 : -1;
         IShape s = currentShape.GetComponent<IShape>();
         //int[] ci = waves[numberWave].shapes[numberShape].colorIndexs;
-        s.SetVariable(waves[numberWave].shapes[numberShape].colorIndexs, 
+        s.SetVariable(waves[numberWave].shapes[numberShape].colorIndexs,
             speedReduction, speedRotation * directionRotate);
         int index = Random.Range(0, waves[numberWave].shapes[numberShape].colorIndexs.Length);
         Player.Instance.SetColorAndLayer(waves[numberWave].shapes[numberShape].colorIndexs[index]);
