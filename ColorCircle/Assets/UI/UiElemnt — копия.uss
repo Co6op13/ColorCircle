@@ -5,7 +5,7 @@
     border-bottom-right-radius: 10px;
     width: 65%;
     height: 20%;
-    font-size: 197%;
+    font-size: 48px;
     background-color: rgb(37, 168, 164);
     border-left-color: rgb(38, 38, 38);
     border-right-color: rgb(38, 38, 38);
@@ -13,7 +13,6 @@
     border-bottom-color: rgb(38, 38, 38);
     border-left-width: 5px;
     border-bottom-width: 10px;
-    scale: 1 1;
 }
 
 .MenuButton:hover {
@@ -21,9 +20,9 @@
     transition-duration: 0.5s;
     width: 65%;
     height: 25%;
-    font-size: 220%;
+    font-size: 56px;
 }
 
 .TextPercent {
-    font-size: 10px;
+    font-size: 10vw;
 }

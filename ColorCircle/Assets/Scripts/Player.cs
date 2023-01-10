@@ -46,14 +46,14 @@ public class Player : MonoBehaviour
         {
             //audioDash.pitch = Random.Range(0.7f, 1.3f);
             //audioDash.Play();
+
             StartCoroutine(Dash());
 
         }
 
         if (Input.GetKey("escape"))
         {
-            // isPause = true;
-            //menu.PauseOn();
+            MyEventManager.SendPause();
         }
     }
 
@@ -63,7 +63,6 @@ public class Player : MonoBehaviour
     }
     private IEnumerator Dash()
     {
-        //Debug.Break();
         canDash = false;
         Invoke("ResetDash", delayDash);
         triger = true;
@@ -78,33 +77,19 @@ public class Player : MonoBehaviour
         collider2d.offset = startPosCurcosr;
         cursorPosition.localPosition = startPosCurcosr;
         yield return new WaitUntil(() => canDash == true);
-        //collider2d.enabled = true;
         yield break;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //collider2d.enabled = false;
         triger = false;
         if (gameObject.layer.Equals(collision.gameObject.layer))
         {
-            MyEventManager.SendIncreasePoints();
-            //GameManager.Instance.DisableCurrentShape();
-
-            //            winnerPointParcticle.transform.position = cursorPosition.position;
-            //          winnerPointParcticle.SetActive(true);
-            //        winnerPointParcticle2.SetActive(true);
-            //      circle.DestroyCircle();
-            //    ChangeColor();
-            //  menu.UpPoints();
-
-        }
+            MyEventManager.SendIncreasePoints();        }
         else
         {
-            Debug.Log(gameObject.layer + "  " + collision.gameObject.layer);
-
-            //sprite.enabled = false;
-            //circle.isGameOver = true;
+            MyEventManager.SendGameOver();
+            sprite.enabled = false;
             //music.StopMusic();
             //audioGameOver.Play();
         }

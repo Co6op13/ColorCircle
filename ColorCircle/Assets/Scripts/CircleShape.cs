@@ -56,12 +56,11 @@ public class CircleShape : MonoBehaviour, IShape
 
     public void DisableShape()
     {
-        Debug.Log(222);
+
         for (int i = 0; i < fragments.Length; i++)
         {
             fragments[i].GetComponent<LineController>().DisableFragment(transform);
         }
-        Debug.Log(222222);
         //gameObject.transform.DetachChildren();
         gameObject.SetActive(false);
     }

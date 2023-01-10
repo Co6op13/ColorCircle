@@ -20,9 +20,9 @@
             <ui:Button text="Resume" display-tooltip-when-elided="true" name="ResumeButton" class="MenuButton" style="width: 50%; height: 20%; font-size: 48px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; overflow: visible; background-color: rgb(0, 141, 226);" />
             <ui:Button text="Restart" display-tooltip-when-elided="true" name="RestartButton1" class="MenuButton" style="width: 50%; height: 20%; font-size: 48px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; top: 50px; overflow: visible; background-color: rgb(170, 1, 132);" />
         </ui:VisualElement>
-        <ui:VisualElement name="StartMenu" style="width: 50%; height: 50%; align-items: center; rotate: -5deg; display: flex; position: absolute; visibility: hidden;">
-            <ui:VisualElement style="flex-direction: row;">
-                <ui:Label text="C" display-tooltip-when-elided="true" class="font" style="font-size: 128px; color: rgb(255, 3, 3);" />
+        <ui:VisualElement name="StartMenu" style="width: 50%; height: 50%; align-items: center; rotate: -5deg; display: flex; position: absolute; visibility: visible;">
+            <ui:VisualElement style="flex-direction: row; width: 200%; height: 100%; align-items: center; justify-content: center;">
+                <ui:Label text="C" display-tooltip-when-elided="true" class="font TextPercent" style="color: rgb(255, 3, 3);" />
                 <ui:Label text="o" display-tooltip-when-elided="true" class="font" style="-unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(255, 128, 2); font-size: 128px;" />
                 <ui:Label text="l" display-tooltip-when-elided="true" class="font" style="-unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(246, 255, 0); font-size: 128px;" />
                 <ui:Label text="o" display-tooltip-when-elided="true" class="font" style="-unity-font: url(&apos;project://database/Assets/UI/Kaph-Italic.ttf?fileID=12800000&amp;guid=6dc42a9f3da5982469f8afdd00b2f399&amp;type=3#Kaph-Italic&apos;); -unity-font-style: bold; color: rgb(60, 240, 13); font-size: 128px;" />

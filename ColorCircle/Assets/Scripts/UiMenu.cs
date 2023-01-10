@@ -35,6 +35,8 @@ public class UiMenu : MonoBehaviour
         Button exitGameButton2 = root.Q<Button>("ExitGameButton2");
 
         MyEventManager.OnIncreasePoints.AddListener(IncreasePoints);
+        MyEventManager.OnGameOver.AddListener(ShowGameOver);
+        MyEventManager.OnPause.AddListener(ShowMenuPause);
 
         pointsLabel = root.Q<Label>("PointsLabel");
         speedLabel = root.Q<Label>("SpeedLabel");
@@ -49,7 +51,6 @@ public class UiMenu : MonoBehaviour
 
     private void RestartLavel()
     {
-        Debug.Log(12333);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -61,12 +62,13 @@ public class UiMenu : MonoBehaviour
     public void PauseOff()
     {
         Time.timeScale = 1;
-        //player.isPause = false;
         mainMenu.style.visibility = Visibility.Hidden;
         pauseMeny.style.visibility = Visibility.Hidden;
+        player.gameObject.SetActive(true);
     }
-    public void PauseOn()
+    public void ShowMenuPause()
     {
+        player.gameObject.SetActive(false);
         mainMenu.style.visibility = Visibility.Visible;
         pauseMeny.style.visibility = Visibility.Visible;
         Time.timeScale = 0;
@@ -74,9 +76,6 @@ public class UiMenu : MonoBehaviour
     private void StartGame()
     {
         MyEventManager.SendStartGame();
-        //circle.isStartGame = true;
-        //circle.DrawNewCircle();
-        //Player.Instance.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
         startMeny.style.visibility = Visibility.Hidden;
         mainMenu.style.visibility = Visibility.Hidden;       
@@ -101,13 +100,5 @@ public class UiMenu : MonoBehaviour
         points++;
         pointsLabel.text = points.ToString();
     }
-
-    public void SetSpeedToLabel(float speed)
-    {
-        //speedLabel.text = Math.Round(speed).ToString();
-    }
-    //{
-    //    moneyLabel.text = GameManager.Instance.GetAmountMoney().ToString();
-    //}
 
 }
