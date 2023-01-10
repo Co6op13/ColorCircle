@@ -87,26 +87,6 @@ public class LineController : MonoBehaviour
         return lr.startWidth;
     }
 
-
-    public void DisableFragment()
-    {
-        //audioUpPoint.Play();
-        Vector3[] points = new Vector3[circleRenderer.positionCount];
-        //Get old Positions
-        circleRenderer.GetPositions(points);
-        foreach ( var point in points)
-        {
-            int rand = Random.Range(0, 2);   
-            if (rand == 1)
-            {
-                var p =ShapePool.Instance.GetFromPool(particle.name, point, transform.rotation);
-                var pp = p.GetComponent<ParticleSystem>().main;
-                pp.startColor = color;
-            }
-        }
-        //gameObject.SetActive(false);
-        //Destroy(gameObject);
-    }
     public void DrawCircle()
     {
         float deltaTheta = ((2f * Mathf.PI ) / (vertexCount) / (fragments));
@@ -122,5 +102,27 @@ public class LineController : MonoBehaviour
         }
         endPosition =theta - deltaTheta;
         //startPosition += rotateSpeed;
+    }
+
+    public void DisableFragment(Transform transform)
+    {
+        //audioUpPoint.Play();
+        Vector3[] points = new Vector3[circleRenderer.positionCount];
+
+        circleRenderer.GetPositions(points);
+        foreach ( var point in points)
+        {
+            int rand = Random.Range(0, 2);   
+            if (rand == 1)
+            {
+                var pos = transform.TransformPoint(point) + new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0f);
+                //var pos = transform.TransformPoint(point);
+                //Debug.Log(point + "   " + scale + "  " + (point * scale));
+                var p =ShapePool.Instance.GetFromPool(particle.name, pos , transform.rotation );
+                var pp = p.GetComponent<ParticleSystem>().main;
+                pp.startColor = color;
+            }
+        }
+        gameObject.SetActive(false);
     }
 }
